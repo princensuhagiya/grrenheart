@@ -16,7 +16,7 @@
   <body>
     <!-- header -->
 
-    <!-- <header>
+    <header>
       <div class="container">
         <div class="navbar">
           <div class="navbar-brand navbar-toggle">
@@ -858,7 +858,7 @@
           </div>
         </div>
       </div>
-    </header> -->
+    </header>
 
     <div class="hero-section">
       <div class="hero-section-slider">
@@ -867,13 +867,39 @@
             <div class="img-hero">
               <img src="./images/hero-img.png" alt="hero-img" />
             </div>
-            <div class="relative">
-                <div class="container">
-                     <div>
-
-                     </div>
-                    <h1 class="">LEAD SUPPORT DEVELOP</h1>
+            <div class="relative-content">
+              <div class="container">
+                <div class="content-title">
+                  <h1 class="">LEAD SUPPORT DEVELOP</h1>
                 </div>
+                <div class="hero-btn">
+                  <a href="javascript:void(0)" class="btn"
+                    ><span>OUR ACADEMIES</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="content-img">
+            <div class="img-hero">
+              <img
+                src="https://images.pexels.com/photos/17028691/pexels-photo-17028691/free-photo-of-sea-city-dawn-sunset.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="hero-img"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="content-img">
+            <div class="img-hero">
+              <img
+                src="https://images.pexels.com/photos/16118486/pexels-photo-16118486/free-photo-of-group-of-people-posing-under-trees-in-park.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="hero-img"
+              />
             </div>
           </div>
         </div>
@@ -891,23 +917,32 @@
     ></script>
     <script src="./js/main.js"></script>
     <script>
-      $(".sub-menu").click(function() {
-        $(".sub-menu")
-          .not(this)
-          .removeClass("active");
+      $(".sub-menu").click(function () {
+        $(".sub-menu").not(this).removeClass("active");
         let method = $(this).hasClass("active") ? "removeClass" : "addClass";
         $(this)[method]("active");
         $("header")[method]("menu-open");
       });
 
-      $(".navbar-toggle").click(function() {
+      $(".navbar-toggle").click(function () {
         $(".menu-buttom").toggleClass("show");
       });
 
       $(".hero-section-slider").slick({
+        dots: true,
         arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1,
+        speed: 300,
+        infinite: true,
+        responsive: [
+          {
+            breakpoint: 576,
+            settings: {
+              dots: false,
+            },
+          },
+        ],
       });
     </script>
   </body>

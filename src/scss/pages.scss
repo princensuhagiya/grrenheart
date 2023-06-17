@@ -1,6 +1,45 @@
 .hero-section {
   position: sticky;
 
+  ul.slick-dots {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 75px;
+
+    li {
+      @media (min-width: $sm) {
+        button {
+          position: relative;
+          visibility: hidden;
+          margin-bottom: 2px;
+          height: 40px;
+
+          &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2px;
+            height: 40px;
+            background-color: #fff;
+            opacity: 0.5;
+            z-index: 5;
+            visibility: visible;
+          }
+        }
+      }
+    }
+    .slick-active {
+      button {
+        &:before {
+          background-color: #fff;
+          opacity: 100%;
+        }
+      }
+    }
+  }
+
   .img-hero img {
     width: 100%;
     height: 100vh;
@@ -10,16 +49,43 @@
     .content-img {
       position: relative;
 
-      .content {
+      .relative-content {
         position: absolute;
         width: 100%;
+        height: auto;
         top: 50%;
         transform: translateY(-50%);
         left: 0;
         z-index: 2;
 
-        h1 {
+        .content-title {
+          width: 100%;
+          max-width: 510px;
+          margin-bottom: 15px;
+
+          h1 {
+            font-size: 110px;
+            font-weight: 800;
+            line-height: 1;
+            font-family: "Raleway";
+            color: #fff;
+
+            @media (max-width: $md) {
+              font-size: 60px;
+            }
+          }
+        }
+      }
+
+      .hero-btn {
+        a {
           color: #fff;
+        }
+
+        &:hover {
+          a {
+            color: #000;
+          }
         }
       }
 
