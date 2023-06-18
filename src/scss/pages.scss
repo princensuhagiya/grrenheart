@@ -1,3 +1,4 @@
+// hero section css start
 .hero-section {
   position: sticky;
 
@@ -102,4 +103,74 @@
       }
     }
   }
+
+  .main-bg-layer {
+    background-color: #fff;
+  }
 }
+// hero section css end
+
+// two-column css start
+.two-column-section-start {
+  position: relative;
+  .main {
+    display: flex;
+    align-items: center;
+
+    .image-mian {
+      @media (min-width: $lg) {
+        width: 50%;
+      }
+      .image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .main-conent {
+      @media (min-width: $lg) {
+        width: 50%;
+
+        .content {
+          display: flex;
+          padding: 0;
+          flex-direction: column;
+          text-align: left;
+
+          h6 {
+            font-size: 12px;
+            opacity: 49%;
+            line-height: 1;
+            letter-spacing: 1.44px;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-family: "Poppins";
+          }
+
+          h2 {
+            font-size: 60px;
+            font-family: "Raleway";
+            text-transform: uppercase;
+            font-weight: 500;
+            line-height: 1;
+          }
+
+          p {
+            font-family: "Poppins";
+            font-size: 15px;
+            text-align: left;
+            opacity: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+// two-column css end
