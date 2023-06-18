@@ -796,20 +796,25 @@ header.menu-open .header-btn a {
 .two-column-section-start {
   position: relative;
 }
-.two-column-section-start .main {
-  display: flex;
-  align-items: center;
+@media (min-width: 1024px) {
+  .two-column-section-start .main {
+    display: flex;
+    align-items: center;
+  }
 }
 @media (min-width: 1024px) {
   .two-column-section-start .main .image-mian {
     width: 50%;
   }
 }
-.two-column-section-start .main .image-mian .image {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 50%;
+@media (min-width: 1024px) {
+  .two-column-section-start .main .image-mian .image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 610px;
+  }
 }
 .two-column-section-start .main .image-mian .image > img {
   width: 100%;
@@ -820,6 +825,11 @@ header.menu-open .header-btn a {
 @media (min-width: 1024px) {
   .two-column-section-start .main .main-conent {
     width: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 610px;
   }
   .two-column-section-start .main .main-conent .content {
     display: flex;
@@ -842,6 +852,7 @@ header.menu-open .header-btn a {
     text-transform: uppercase;
     font-weight: 500;
     line-height: 1;
+    margin-bottom: 15px;
   }
   .two-column-section-start .main .main-conent .content p {
     font-family: "Poppins";
