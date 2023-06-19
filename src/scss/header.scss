@@ -12,6 +12,7 @@ header {
 
   &.menu-open {
     background-color: #fff;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
     .header-logo {
       color: #000;
@@ -124,6 +125,7 @@ header {
               width: calc(100% * 25);
               height: 100%;
               position: absolute;
+              top: 34px;
               left: -50%;
               transform: translateX(-50%);
               background-color: #fff;

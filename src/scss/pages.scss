@@ -1,6 +1,8 @@
 // hero section css start
 .hero-section {
   position: sticky;
+  top: 0;
+  height: 100vh;
 
   ul.slick-dots {
     position: absolute;
@@ -41,10 +43,20 @@
     }
   }
 
-  .img-hero img {
+  .img-hero {
     width: 100%;
-    height: 100vh;
-    object-fit: cover;
+    height: 100%;
+
+    @media (max-width: $md) {
+      height: 624px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 70%;
+    }
   }
   .hero-section-slider {
     .content-img {
@@ -107,21 +119,53 @@
   .main-bg-layer {
     background-color: #fff;
   }
-}
-// hero section css end
 
-// two-column css start
-.two-column-section-start {
+  .scroll {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    z-index: 6;
+    transform: rotate(-90deg);
+    span {
+      display: block;
+    }
+
+    a {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      position: relative;
+      padding-left: 10px;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(50%);
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        right: 100%;
+      }
+    }
+  }
+}
+
+// two-column-our-story start
+.two-column-our-story {
   position: relative;
+  margin-bottom: 123px;
   .main {
-    @media (min-width: $lg) {
-      display: flex;
-      align-items: center;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $lg) {
+      flex-direction: column-reverse;
     }
 
     .image-mian {
       @media (min-width: $lg) {
         width: 50%;
+        min-height: 610px;
       }
       .image {
         @media (min-width: $lg) {
@@ -129,13 +173,14 @@
           left: 0;
           top: 0;
           width: 50%;
-          height: 610px;
+          height: 100%;
         }
 
         > img {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          flex-shrink: 0;
         }
       }
     }
@@ -143,46 +188,387 @@
     .main-conent {
       @media (min-width: $lg) {
         width: 50%;
-        width: 50%;
+        padding-left: 92px;
+      }
+      .content {
         display: flex;
-        justify-content: center;
+        padding: 0;
         flex-direction: column;
-        height: 610px;
+        text-align: left;
 
-        .content {
-          display: flex;
-          padding: 0;
-          flex-direction: column;
+        @media (max-width: $lg) {
+          padding: 60px 0 50px;
+        }
+
+        h6 {
+          font-size: 12px;
+          opacity: 49%;
+          line-height: 1;
+          letter-spacing: 1.44px;
+          font-weight: 800;
+          text-transform: uppercase;
+          font-family: "Poppins";
+        }
+
+        h2 {
+          font-size: 60px;
+          font-family: "Raleway";
+          text-transform: uppercase;
+          font-weight: 400;
+          line-height: 1;
+          margin-bottom: 15px;
+          @media (max-width: $lg) {
+            font-size: 55px;
+          }
+          @media (max-width: $sm) {
+            strong {
+              display: block;
+            }
+          }
+        }
+
+        p {
+          font-family: "Poppins";
+          font-size: 15px;
           text-align: left;
+          opacity: 50%;
+          margin-bottom: 14px;
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
 
-          h6 {
-            font-size: 12px;
-            opacity: 49%;
-            line-height: 1;
-            letter-spacing: 1.44px;
-            font-weight: 800;
+        .conent-btn {
+          a {
+            color: #000;
             text-transform: uppercase;
-            font-family: "Poppins";
-          }
 
-          h2 {
-            font-size: 60px;
-            font-family: "Raleway";
-            text-transform: uppercase;
-            font-weight: 500;
-            line-height: 1;
-            margin-bottom: 15px;
-          }
+            &:hover {
+              color: #64d281;
 
-          p {
-            font-family: "Poppins";
-            font-size: 15px;
-            text-align: left;
-            opacity: 50%;
+              @media (max-width: $lg) {
+                color: #fff;
+              }
+            }
           }
         }
       }
     }
   }
 }
-// two-column css end
+
+// what we do start
+.two-column-explore {
+  position: relative;
+  margin: 123px 0;
+  .main {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $lg) {
+      flex-direction: column-reverse;
+    }
+
+    .image-mian {
+      @media (min-width: $lg) {
+        width: 50%;
+        min-height: 610px;
+      }
+      .image {
+        @media (min-width: $lg) {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 50%;
+          height: 100%;
+        }
+
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          flex-shrink: 0;
+        }
+      }
+    }
+
+    .main-conent {
+      @media (min-width: $lg) {
+        width: 50%;
+        padding-right: 92px;
+      }
+      .content {
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+        text-align: left;
+
+        @media (max-width: $lg) {
+          padding: 60px 0 50px;
+        }
+
+        h6 {
+          font-size: 12px;
+          opacity: 49%;
+          line-height: 1;
+          letter-spacing: 1.44px;
+          font-weight: 800;
+          text-transform: uppercase;
+          font-family: "Poppins";
+        }
+
+        h2 {
+          font-size: 60px;
+          font-family: "Raleway";
+          text-transform: uppercase;
+          font-weight: 400;
+          line-height: 1;
+          margin-bottom: 15px;
+          @media (max-width: $lg) {
+            font-size: 50px;
+          }
+          strong {
+            display: block;
+          }
+        }
+
+        p {
+          font-family: "Poppins";
+          font-size: 15px;
+          text-align: left;
+          opacity: 50%;
+          margin-bottom: 14px;
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .conent-btn {
+          a {
+            color: #000;
+            text-transform: uppercase;
+
+            &:hover {
+              color: #64d281;
+
+              @media (max-width: $lg) {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// text-bg-image start
+.text-bg-image {
+  .main-bg-text {
+    position: relative;
+
+    .bg-image {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      @media (max-width: $lg) {
+        height: 396px;
+      }
+    }
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 106px;
+      transform: translateY(-50%);
+      right: 106px;
+      @media (max-width: $md) {
+        left: 25px;
+        right: 25px;
+      }
+
+      .heading-with-logo {
+        text-align: center;
+        @media (min-width: $xl) {
+          display: flex;
+          align-items: center;
+        }
+
+        h3 {
+          font-size: 40px;
+          line-height: 2;
+          font-weight: 400;
+          text-transform: uppercase;
+          color: #fff;
+          @media (max-width: $md) {
+            font-size: 30px;
+            line-height: 1.2;
+          }
+        }
+      }
+
+      .text-logo {
+        width: 100%;
+        max-width: 592px;
+        margin: 0 auto;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .bg-text-btn {
+        display: flex;
+        width: 172px;
+        margin: 0 auto;
+        @media (min-width: $md) {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        a {
+          padding: 20px 41px;
+          display: inline-block;
+          color: #000;
+
+          @media (min-width: $lg) {
+            &:hover {
+              color: #64d281;
+            }
+          }
+          @media (max-width: $lg) {
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.two-column-in-action {
+  position: relative;
+  margin-top: 123px;
+  .main {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $lg) {
+      flex-direction: column-reverse;
+    }
+
+    .image-mian {
+      @media (min-width: $lg) {
+        width: 50%;
+        min-height: 610px;
+      }
+      .image {
+        @media (min-width: $lg) {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 50%;
+          height: 100%;
+        }
+
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          flex-shrink: 0;
+        }
+      }
+    }
+
+    .main-conent {
+      @media (min-width: $lg) {
+        width: 50%;
+        padding-left: 92px;
+      }
+      .content {
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+        text-align: left;
+
+        @media (max-width: $lg) {
+          padding: 60px 0 50px;
+        }
+
+        h6 {
+          font-size: 12px;
+          opacity: 49%;
+          line-height: 1;
+          letter-spacing: 1.44px;
+          font-weight: 800;
+          text-transform: uppercase;
+          font-family: "Poppins";
+        }
+
+        h2 {
+          font-size: 60px;
+          font-family: "Raleway";
+          text-transform: uppercase;
+          font-weight: 400;
+          line-height: 1;
+          margin-bottom: 15px;
+          @media (max-width: $lg) {
+            font-size: 55px;
+          }
+          @media (max-width: $sm) {
+            strong {
+              display: block;
+            }
+          }
+        }
+
+        p {
+          font-family: "Poppins";
+          font-size: 15px;
+          text-align: left;
+          opacity: 50%;
+          margin-bottom: 14px;
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .conent-btn {
+          a {
+            color: #000;
+            text-transform: uppercase;
+
+            &:hover {
+              color: #64d281;
+
+              @media (max-width: $lg) {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-bg-layer {
+  position: relative;
+  padding-top: 156px;
+  background-color: #fff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    height: 42px;
+    background-color: #fff;
+    clip-path: polygon(0 50px, 100% 0, 100% 100%, 0 100%);
+  }
+}
