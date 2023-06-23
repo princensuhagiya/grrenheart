@@ -907,45 +907,46 @@
       </div>
       <div class="scroll">
         <a href="#scrollAll" id="">
-        scroll
+          scroll
         </a>
       </div>
     </section>
     <!-- hero section end -->
-    
 
     <div class="main-bg-layer" id="scrollAll">
       <!-- two-column-section-start -->
       <section class="two-column-our-story">
-        <div class="container">
-          <div class="main">
-            <div class="image-mian">
-              <div class="image">
-                <img src="./images/all-about-us.png" alt="" srcset="" />
+        <div class="relative">
+          <div class="container">
+            <div class="main">
+              <div class="image-mian">
+                <div class="image">
+                  <img src="./images/all-about-us.png" alt="" srcset="" />
+                </div>
               </div>
-            </div>
-            <div class="main-conent">
-              <div class="content">
-                <h6>OUR STORY</h6>
-                <h2><strong>ALL</strong> ABOUT US</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                  facilisis dolor nunc, in rhoncus nunc facilisis vitae. Etiam
-                  vel lectus maximus, rhoncus quam sit amet, elementum turpis
-                  curabitur. Phasellus ullamcorper magna turpis, vel suscipit
-                  lacus faucibus a. Praesent ultricies dui lectus, vitae
-                  vestibulum ligula maximus sed. Vestibulum hendrerit eros et
-                  aliquet facilisis. Integer porta purus quis est pharetra
-                  consectetur vitae sed diam. Quisque ornare varius nisi quis
-                  ultrices. Ut blandit eros sed eleifend posuere. Quisque et
-                  arcu non ante facilisis molestie. Aliquam vestibulum sem nec
-                  ullamcorper blandit. Donec scelerisque leo. in mi dignissim,
-                  commodo porttitor dolor aliquet. Donec egestas augue.
-                </p>
-                <div class="conent-btn">
-                  <a href="javascript:void(0)" class="btn"
-                    ><span>Learn More</span>
-                  </a>
+              <div class="main-conent">
+                <div class="content">
+                  <h6>OUR STORY</h6>
+                  <h2><strong>ALL</strong> ABOUT US</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    facilisis dolor nunc, in rhoncus nunc facilisis vitae. Etiam
+                    vel lectus maximus, rhoncus quam sit amet, elementum turpis
+                    curabitur. Phasellus ullamcorper magna turpis, vel suscipit
+                    lacus faucibus a. Praesent ultricies dui lectus, vitae
+                    vestibulum ligula maximus sed. Vestibulum hendrerit eros et
+                    aliquet facilisis. Integer porta purus quis est pharetra
+                    consectetur vitae sed diam. Quisque ornare varius nisi quis
+                    ultrices. Ut blandit eros sed eleifend posuere. Quisque et
+                    arcu non ante facilisis molestie. Aliquam vestibulum sem nec
+                    ullamcorper blandit. Donec scelerisque leo. in mi dignissim,
+                    commodo porttitor dolor aliquet. Donec egestas augue.
+                  </p>
+                  <div class="conent-btn">
+                    <a href="javascript:void(0)" class="btn"
+                      ><span>Learn More</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -994,7 +995,7 @@
       <!-- two-column-section-start -->
 
       <!-- bg-image-with-content -->
-      <section class="text-bg-image">
+      <!-- <section class="text-bg-image">
         <div class="container">
           <div class="main-bg-text">
             <div class="bg-image">
@@ -1020,10 +1021,26 @@
             </div>
           </div>
         </div>
+      </section> -->
+
+      <section>
+        <div class="container">
+          <div class="bg-image-with-text">
+            <div class="text-with-logo">
+              <h2>IN PARTNERSHIP WITH</h2>
+              <div class="logo">
+                <img
+                  src="./images/logos/bg-image-text-logo.png"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!--two in action -->
-
       <section class="two-column-in-action">
         <div class="container">
           <div class="main">
@@ -1034,8 +1051,11 @@
             </div>
             <div class="main-conent">
               <div class="content">
-                <h6>OUR STORY</h6>
-                <h2><strong>ALL</strong> ABOUT US</h2>
+                <h6>IN ACTION</h6>
+                <h2>
+                  <strong>GREENHEART</strong><br />
+                  IN ACTION
+                </h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                   facilisis dolor nunc, in rhoncus nunc facilisis vitae. Etiam
@@ -1318,30 +1338,24 @@
         ],
       });
 
-
-      if(window.innerWidth >  767){
-
-
       $(document).ready(function() {
         $(window).scroll(function() {
           console.log(
             window.pageYOffset,
             window.innerHeight - $("header").height()
           );
-          if (window.pageYOffset > window.innerHeight - $("header").height()) {
+          if (window.pageYOffset > 200 - $("header").height()) {
             $("header").addClass("menu-open");
           } else {
             $("header").removeClass("menu-open");
           }
         });
-        if (window.pageYOffset > window.innerHeight - $("header").height()) {
+        if (window.pageYOffset > 200 - $("header").height()) {
           $("header").addClass("menu-open");
         } else {
           $("header").removeClass("menu-open");
         }
       });
-      }
-
     </script>
   </body>
 </html>
